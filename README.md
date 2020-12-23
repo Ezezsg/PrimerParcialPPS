@@ -19,8 +19,8 @@ ionic cordova platform add android<br/>
 
 ingresar con android studio a la aplicacion:<br/>
 "nombre"/platforms/android<br/>
-actualizar Gradle
-
+actualizar Gradle<br/>
+ionic cordova build android<br/>
 
 # Generar icono y splash
 
