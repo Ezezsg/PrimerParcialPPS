@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="cabecera">
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="fondo">
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        Bienvenido!
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Su correo electrónico registrado : {{userEmail}}
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+    
+      <!-- <img style="display:block; margin:auto;" src="../../assets/img/icon.png"> -->
+ <br>
+ <br>
+ <ion-button id="boton" expand="full" (click)="CargarQR()" color="cabecera">Escanear</ion-button>
+
+ <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        {{userEmail}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Créditos : {{valorBind}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<ion-button id="boton" expand="full" (click)="Limpiar()" color="cabecera">Limpiar</ion-button>
+
+
+</ion-content>
+<ion-footer (click)="logout()">
+  <ion-toolbar color="cabecera">
+    <ion-title>Cerrar sesión</ion-title>
+  </ion-toolbar>
+</ion-footer>
+

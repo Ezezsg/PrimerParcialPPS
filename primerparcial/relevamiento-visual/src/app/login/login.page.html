@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="cabecera">
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="ion-padding" color="fondo">
+  <form class="form" [formGroup]="validations_form" (ngSubmit)="loginUser(validations_form.value)">
+
+    <ion-item>
+      <ion-label position="floating" color="cabecera">Correo electrónico</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <div class="error-message"
+          *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating" color="cabecera">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.password">
+        <div class="error-message"
+          *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-button class="submit-btn" expand="block" color="cabecera" type="submit" [disabled]="!validations_form.valid">Iniciar sesión</ion-button>
+
+    <label class="error-message">{{errorMessage}}</label>
+  </form>
+  <p class="go-to-register">
+    ¿No tienes cuenta aún? <a class="cuenta" (click)="goToRegisterPage()">Crea una cuenta.</a>
+  </p>
+
+  <ion-button expand="block" color="cabecera" (click)="usuarios('admin')">Administrador</ion-button>
+  <ion-button expand="block" color="cabecera" (click)="usuarios('invitado')">Invitado</ion-button>
+  <ion-button expand="block" color="cabecera" (click)="usuarios('usuario')">Usuario</ion-button>
+  <ion-button expand="block" color="cabecera" (click)="usuarios('anonimo')">Anonimo</ion-button>
+  <ion-button expand="block" color="cabecera" (click)="usuarios('tester')">Tester</ion-button>
+
+</ion-content>
+

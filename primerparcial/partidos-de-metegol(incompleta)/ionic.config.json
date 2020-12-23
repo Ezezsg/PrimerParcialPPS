@@ -1,0 +1,8 @@
+{
+  "name": "partidos-de-metegol",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

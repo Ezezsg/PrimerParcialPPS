@@ -1,0 +1,8 @@
+{
+  "name": "conversando-en-el-aula",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="cabecera">
+    <ion-title>Alarma de Robo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="fondo">
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        Bienvenido!
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Su correo electrónico registrado : {{userEmail}}
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+  
+  <div  align="bottom" class="contenedor" >
+    <ion-button fill="clear" *ngIf="!isOn" class="botonOff" (click)="Iniciar()" type="button" expand="full">
+      
+      
+    </ion-button>
+    <ion-button fill="clear" *ngIf="isOn" class="botonOn" (click)="Ingreseclave()"  type="button" expand="full">
+
+      
+    </ion-button>
+  </div>
+    
+
+</ion-content>
+<ion-footer (click)="logout()">
+  <ion-toolbar color="cabecera">
+    <ion-title>Cerrar sesión</ion-title>
+  </ion-toolbar>
+</ion-footer>
+

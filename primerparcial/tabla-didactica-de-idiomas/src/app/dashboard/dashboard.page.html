@@ -1,0 +1,92 @@
+<!-- <ion-header>
+  <ion-toolbar color="cabecera">
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-padding" color="dark">
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        Bienvenido!
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Su correo electrónico registrado : {{userEmail}}
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+    
+      <!-- <img style="display:block; margin:auto;" src="../../assets/img/icon.png"> -->
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button color="cabecera">
+      <ion-icon name="{{faIconTematica}}"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button color="cabecera" (click)="cambiarTematica('colores')"><ion-icon name="color-palette"></ion-icon></ion-fab-button>
+      <ion-fab-button color="cabecera" (click)="cambiarTematica('numeros')"><ion-icon name="grid"></ion-icon></ion-fab-button>
+      <ion-fab-button color="cabecera" (click)="cambiarTematica('animales')"><ion-icon name="paw"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button *ngIf="faIconIdioma == 'español'" color="cabecera">
+      <img [src]="url_img_p[0].url" width="100%" height="100%">
+    </ion-fab-button>
+    <ion-fab-button *ngIf="faIconIdioma == 'ingles'" color="cabecera">
+      <img [src]="url_img_p[1].url" width="100%" height="100%">
+    </ion-fab-button>
+    <ion-fab-button *ngIf="faIconIdioma == 'portugues'" color="cabecera">
+      <img [src]="url_img_p[2].url" width="100%" height="100%">
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button color="cabecera" (click)="instanciarAudios('español')"><img [src]="url_img_p[0].url" width="100%" height="100%"></ion-fab-button>
+      <ion-fab-button color="cabecera" (click)="instanciarAudios('ingles')"><img [src]="url_img_p[1].url" width="100%" height="100%"></ion-fab-button>
+      <ion-fab-button color="cabecera" (click)="instanciarAudios('portugues')"><img [src]="url_img_p[2].url" width="100%" height="100%"></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <br>
+  <br>
+  <br>
+  
+  <ion-grid class="fondo">
+    
+        <ion-button id="boton" size="large" class="btn btn-1" (click)="playSound('id_1')" color="dark">
+            <img [src]="url_img[0].url" width="100%" height="100%">
+        </ion-button>
+        
+        <ion-button id="boton" size="large" class="btn btn-2" (click)="playSound('id_2')" color="dark">
+            <img [src]="url_img[1].url" width="100%" height="100%">
+        </ion-button>
+      
+        <ion-button id="boton" size="large" class="btn btn-3" (click)="playSound('id_3')" color="dark">
+            <img [src]="url_img[2].url" width="100%" height="100%" >
+          </ion-button>
+        
+        <ion-button id="boton" size="large" class="btn btn-4" (click)="playSound('id_4')" color="dark">
+              <img [src]="url_img[3].url" width="100%" height="100%">
+        </ion-button>
+        
+        <ion-button id="boton" size="large" class="btn btn-5" (click)="playSound('id_5')" color="dark">
+              <img [src]="url_img[4].url" width="100%" height="100%">
+        </ion-button>
+          
+  </ion-grid>
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="cabecera" (click)="logout()">
+      <ion-icon name="exit"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
+<!-- <ion-footer (click)="logout()">
+  <ion-toolbar color="cabecera">
+    <ion-title>Cerrar sesión</ion-title>
+  </ion-toolbar>
+</ion-footer> -->
+

@@ -1,0 +1,8 @@
+{
+  "name": "Tabla-didáctica-de-idiomas",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

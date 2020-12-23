@@ -1,0 +1,8 @@
+{
+  "name": "relevamiento-visual",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

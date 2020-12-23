@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>PPS-4A</ion-title>
+    <ion-button color="cabecera" routerLink="/dashboard" slot="end">
+      <ion-icon class="icon" name="exit"></ion-icon> Volver
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo" color="light">
+
+      <div style="margin-top:15px" class="animated fadeInUp">
+      <div class="row mb-2" *ngFor="let message of messages">
+        <div class="col-12">
+          <div class="arrow_box_rigth" *ngIf="message.username == userEmail">
+            <span class="autor">{{message.fecha}}</span> {{ message.message }}
+          </div>
+          <div class="arrow_box_left" *ngIf="message.username != userEmail">
+            <span class="autor">{{ message.username }} {{message.fecha}}</span> {{ message.message }}
+          </div>
+        </div>
+      </div>
+     
+      
+    </div>
+
+</ion-content>
+
+<!-- <ion-footer (click)="logout()">
+  <ion-toolbar color="cabecera">
+    <ion-title>Cerrar sesión</ion-title>
+  </ion-toolbar>
+</ion-footer> -->
+<ion-footer no-shadow>
+    <ion-toolbar color="light">
+      <div id="footer">
+        <div class="elem"><ion-input type="text" maxlength="21" [(ngModel)]="message"></ion-input></div>
+        <div class="elem"><button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon> </button></div>
+      </div>
+    </ion-toolbar>
+  </ion-footer>

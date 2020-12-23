@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="cabecera">
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padre" color="fondo">
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        Bienvenido!
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Su correo electrónico registrado : {{userEmail}}
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+    
+      <!-- <img style="display:block; margin:auto;" src="../../assets/img/icon.png"> -->
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <img src="assets/img/4a.jpg" width="300" height="190" (click)="entrar('PPS-4A')" style="box-shadow: 2px 2px 5px #999;  width: 100%;"/>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col>
+        <img src="assets/img/4b.jpg" width="300" height="190" (click)="entrar('PPS-4B')" style="box-shadow: 2px 2px 5px #999; width: 100%;"/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  
+
+  
+  
+    
+
+</ion-content>
+<ion-footer (click)="logout()">
+  <ion-toolbar color="cabecera">
+    <ion-title>Cerrar sesión</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
